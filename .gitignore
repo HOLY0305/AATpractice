@@ -1,0 +1,23 @@
+# ============ 运行时数据（含个人信息与密钥，绝不入库） ============
+# data/ 整个目录是本机运行数据：
+#   config.json   → 管理员 PIN + AI API Key（敏感！）
+#   users/        → 用户记录（昵称、答题记录、错题、积分流水）
+#   messages*     → 留言板内容与用户上传图片
+#   main.zip / xingcezhenti/ → 上游题库（264MB+，另有 tools/fetch-bank.cjs 一键拉取）
+/data/*
+!/data/config.example.json
+
+# ============ 构建产物（可由 tools/build*.cjs 一键重建） ============
+/app/data/
+
+# ============ 依赖与本地缓存 ============
+node_modules/
+.tools/
+tools/vendor/
+
+# ============ 验收产物：截图（含界面用户名）、Edge 临时用户目录、日志 ============
+tools/shots*/
+tools/uds*/
+tools/fixtures_out/
+*.log
+tmp/

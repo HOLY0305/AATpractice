@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "adminPin": "",
+  "ai": {
+    "mode": "builtin",
+    "allowAnswerContext": false,
+    "maxTurns": 12,
+    "builtin": {
+      "baseUrl": "mock",
+      "model": "deepseek-flash",
+      "apiKey": "",
+      "label": "内置模型"
+    }
+  },
+  "points": {
+    "correct": 10,
+    "wrong": 2,
+    "firstSolve": 5,
+    "redoCorrect": 5,
+    "dailyGoal": 30,
+    "dailyGoalBonus": 20
+  },
+  "shop": [
+    {
+      "id": "sp_skip",
+      "name": "免做卡",
+      "desc": "跳过一道题，不计入正确率",
+      "cost": 120,
+      "stock": 9,
+      "label": "券",
+      "enabled": true
+    },
+    {
+      "id": "sp_double",
+      "name": "双倍积分卡",
+      "desc": "接下来 30 分钟的答题积分翻倍",
+      "cost": 200,
+      "stock": 5,
+      "label": "倍",
+      "enabled": true
+    },
+    {
+      "id": "sp_clear",
+      "name": "错题赦免券",
+      "desc": "把 5 道错题标记为已掌握",
+      "cost": 150,
+      "stock": 7,
+      "label": "赦",
+      "enabled": true
+    },
+    {
+      "id": "sp_title",
+      "name": "自定义称号",
+      "desc": "在个人主页展示你的专属称号",
+      "cost": 80,
+      "stock": 99,
+      "label": "号",
+      "enabled": true
+    }
+  ]
+}
