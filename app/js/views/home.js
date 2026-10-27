@@ -187,7 +187,8 @@
       });
       const strip = XC.$('#ink-strip');
       if (strip) strip.onclick = () => inkSheet();
-      XC.$('#btn-ink').onclick = () => inkSheet();
+      const bi = XC.$('#btn-ink');
+      if (bi) bi.onclick = () => inkSheet();
     }
     // 删除权：管理员可删任意留言；作者只能删自己的
     const canDelMsg = m => XC.S.admin || m.uid === XC.S.uid;
